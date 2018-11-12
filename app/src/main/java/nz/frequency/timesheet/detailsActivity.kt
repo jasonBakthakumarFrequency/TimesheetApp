@@ -14,7 +14,7 @@ class detailsActivity : AppCompatActivity() {
         val verificationButton : Button = findViewById(R.id.button2)
 
         verificationButton.setOnClickListener {
-            val seperateIntent = Intent(this, CurrentJob::class.java)
+            val seperateIntent = Intent(this, CurrentJobActivity::class.java)
             // start your next activity
             startActivity(seperateIntent)
         }

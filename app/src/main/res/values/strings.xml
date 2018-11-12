@@ -29,6 +29,35 @@
     <string name="details">Details</string>
     <string name="current_job">Current Job</string>
     <string name="job_selection">Job Selection</string>
-    <string name="job_selection_description">You have been assigned to more than one job in this project. Please select the job you\'re working on right now.</string>
+    <string name="job_selection_description">You have been assigned to more than one job in this project. Please select
+        the job you\'re working on right now.
+    </string>
+
+    <string name="choose_job_prompt">Select a job</string>
+
+    <string-array name="job_array">
+        <item>8th Floor Plumbing</item>
+        <item>2nd Floor Cleaning</item>
+        <item>25th Floor Cleaning</item>
+        <item>30th Floor Cleaning</item>
+        <item>80th Floor Roofing</item>
+        <item>12th Floor Plumbing</item>
+        <item>29th Floor Dancing</item>
+        <item>17th Floor Playing</item>
+        <item>17th Floor Being Busy</item>
+    </string-array>
+
+    <string name="time_sheet">Time Sheet</string>
+    <string name="title_activity_clock_in_maps">Map</string>
+    <string name="clock_in_prompt"> Please note that as soon as you clock in, your location will be monitored until you clock out. We will stop monitoring your location as soon as you clock out.</string>
+    <string name="clock_in">Clock In</string>
+    <string name="start_break"> Start Break</string>
+    <string name="end_break"> End Break</string>
+    <string name="clock_out"> Clock Out</string>
+    <string name="current_time">Current Time</string>
+    <string name="time_log">Time Log</string>
+    <string name="health_and_safety">Health and Safety</string>
+    <string name="lorem_ipsum_text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum dictum arcu. Nunc accumsan molestie ante vitae lobortis. Nullam quis orci neque. Curabitur facilisis pulvinar lectus id scelerisque. Sed tincidunt velit placerat nisl lacinia, tempus mollis metus fermentum. Aenean sagittis molestie lorem, vitae faucibus sem ornare at. Donec tincidunt, diam in varius interdum, nibh ipsum luctus odio, nec commodo ligula tortor consectetur est. Nullam nisi diam, ullamcorper a libero at, luctus luctus enim. Aenean sed lectus lorem. Maecenas nec dui volutpat, luctus mi quis, ultrices lacus. Maecenas velit mi, placerat vitae odio a, faucibus consequat purus.</string>
+    
 
 </resources>
