@@ -69,6 +69,8 @@
     </string>
     <string name="history_of_jobs">History of Jobs</string>
     <string name="recycler_view_text"> Recycler View Text</string>
+    <string name="sample_time">Time Clocked In : 12:54:49</string>
+    <string name="time_stuff">00:00:47</string>
 
 
 

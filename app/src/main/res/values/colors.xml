@@ -12,6 +12,7 @@
     <color name="black">#000000</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="custom_red">#EB5757</color>
 
     <color name="colorAccent">#D81B60</color>
 </resources>
