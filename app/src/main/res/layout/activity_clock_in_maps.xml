@@ -4,6 +4,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/parent_layout"
         tools:context=".ClockInMapsActivity">
 
 
@@ -18,6 +19,53 @@
               map:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="3dp"
               map:layout_constraintStart_toStartOf="parent" android:layout_marginTop="3dp"
               map:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextClock
+            android:id="@+id/textClock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm:ss"
+            android:gravity="center|center_vertical|center_horizontal"
+            android:textSize="70sp"
+            android:fontFamily="@font/open_sans_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/map"/>
+    <Button
+            android:text="@string/clock_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:background="@drawable/rounded_corners"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/white"
+            android:elevation="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/textClock"/>
+    <TextView
+            android:text="@string/clock_in_prompt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.553"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </android.support.constraint.ConstraintLayout>

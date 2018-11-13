@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/action_favorites"
+            android:enabled="true"
+            android:icon="@drawable/ic_access_time_black_24dp"
+            android:title="@string/current_time_text"
+            app:showAsAction="always" />
+    <item
+            android:id="@+id/action_schedules"
+            android:enabled="true"
+            android:icon="@drawable/ic_timeline_black_24dp"
+            android:title="@string/time_log"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/action_music"
+            android:enabled="true"
+            android:icon="@drawable/ic_local_hospital_black_24dp"
+            android:title="@string/health_and_safety"
+            app:showAsAction="ifRoom" />
+
+</menu>
