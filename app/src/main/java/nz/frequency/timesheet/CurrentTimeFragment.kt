@@ -57,6 +57,7 @@ class CurrentTimeFragment : Fragment(), OnMapReadyCallback {
     override fun onResume() {
         super.onResume()
 
+        //thats kinda like the timer for an hour
 
         timer(3600000,1000).start()
 
