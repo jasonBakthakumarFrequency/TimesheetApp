@@ -11,15 +11,16 @@ class detailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
-        // This will be the details of the user
+
+        // Setting the title of the app bar to "Details"
         setTitle(R.string.details)
         val verificationButton : Button = findViewById(R.id.button2)
 
-        //When the code is verified and everything we move on to the next thing
+        //After the user verification code is verified we move on to show the current job that user might be working on.
         verificationButton.setOnClickListener {
-            val seperateIntent = Intent(this, CurrentJobActivity::class.java)
-            // start your next activity
-            startActivity(seperateIntent)
+            //Code to move to the next activity
+            val separateIntent = Intent(this, CurrentJobActivity::class.java)
+            startActivity(separateIntent)
         }
     }
 

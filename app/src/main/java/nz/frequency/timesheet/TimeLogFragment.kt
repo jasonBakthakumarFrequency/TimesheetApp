@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 
-
+/**
+ * Shows the time log of a user
+ * */
 
 class TimeLogFragment : Fragment() {
 
@@ -28,6 +30,7 @@ class TimeLogFragment : Fragment() {
         return fragmentView
     }
 
+    //populate the a dummy set of timesheet records
     private fun populateDummyTimeSheet() : ArrayList<TimesheetHistory>{
         var timeList : ArrayList<TimesheetHistory> = ArrayList()
 

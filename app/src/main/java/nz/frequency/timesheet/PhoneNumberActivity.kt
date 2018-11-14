@@ -12,7 +12,7 @@ class PhoneNumberActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_number)
 
-        //Set the title of the app bar
+        //Set the title of the app bar to Phone Number
         setTitle(R.string.phone_number)
         val nextButton : Button = findViewById(R.id.button)
 

@@ -28,13 +28,22 @@ import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_clock_in_maps.*
 
-
+/**
+ * This is the Clock In Maps Activity. It shows the map viwe indicating the location their in and shows the time presenting them with the option to clock in
+ *
+ * */
 class ClockInMapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
+    //Required to configure the Google Maps View
     private lateinit var mMap: GoogleMap
     private lateinit var mapFragment: SupportMapFragment
+
+    //This variable is initialised to make sure that the requested permission is accurate
     private val MY_PERMISSIONS_REQUEST_GET_LOCATION  = 20
+
+    //This constraint layout is referenced because it is required for the Snackbar to be presented
     private lateinit var parentView : ConstraintLayout
+
+    //This is created to reference the clock in button
     private lateinit var clockInButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,8 +52,14 @@ class ClockInMapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
+
+        //Setting up the Constraint Layout
         parentView = findViewById(R.id.parent_layout)
+
+        //Setting up the clock in button
         clockInButton = findViewById(R.id.button3)
+
+        //Setting the title of the App to Time Sheet
         setTitle(R.string.time_sheet)
 
     }
@@ -54,9 +69,12 @@ class ClockInMapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onResume() {
         super.onResume()
+
+        //The Asynchronous map call is implemented within this class
         mapFragment.getMapAsync(this)
 
 
+        //Called when clock in button is clicked
         clockInButton.setOnClickListener {
 
 
@@ -111,6 +129,8 @@ class ClockInMapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
+
+    //Called after the user requests his/her permission
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         when (requestCode) {
             MY_PERMISSIONS_REQUEST_GET_LOCATION -> {
@@ -150,15 +170,21 @@ class ClockInMapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // Add a marker in Auckland and move the camera
         val auckland = LatLng(-36.8485, 174.7633)
 
+        //Configuring the circle option to display on the map
         val circleOptions = CircleOptions()
         circleOptions.center(auckland)
         circleOptions.radius(850.0)
         circleOptions.fillColor(Color.LTGRAY)
         circleOptions.strokeColor(Color.BLACK)
         circleOptions.strokeWidth(3f)
+
+        //Add the configured circle on to the map
         mMap.addCircle(circleOptions)
+        // Represent the marker with a description
         mMap.addMarker(MarkerOptions().position(auckland).title("Marker in Auckland"))
+        //Move into the location of the marker
         mMap.moveCamera(CameraUpdateFactory.newLatLng(auckland))
+        //Zoom into the location of the marker about a 100 meters
         mMap.animateCamera(CameraUpdateFactory.zoomTo(mMap.cameraPosition.zoom + 10f))
 
 

@@ -11,7 +11,9 @@ import kotlinx.android.synthetic.main.recycler_view_item_layout.view.*
 
 class TimeHistoryAdapter(val items : ArrayList<TimesheetHistory>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
-    // Gets the number of animals in the list
+
+
+    // Gets the number of timesheet entries in the list
     override fun getItemCount(): Int {
         return items.size
     }
@@ -22,7 +24,7 @@ class TimeHistoryAdapter(val items : ArrayList<TimesheetHistory>, val context: C
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.recycler_view_item_layout, parent, false))
     }
 
-    // Binds each animal in the ArrayList to a view
+    // Binds each timesheet in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items.get(position)
         holder.dateTextView.text = item.timeHistoryDateText
@@ -31,8 +33,9 @@ class TimeHistoryAdapter(val items : ArrayList<TimesheetHistory>, val context: C
     }
 }
 
+// The view holder of the recycler view
 class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    // Holds the TextView that will add each animal to
+
     val dateTextView: TextView = view.findViewById(R.id.textView20)
     val timeTextView: TextView = view.findViewById(R.id.textView21)
     val durationTextView: TextView = view.findViewById(R.id.textView22)
