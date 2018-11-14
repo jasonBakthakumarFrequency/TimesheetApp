@@ -7,26 +7,25 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 
+// This is the welcome activity. This shows the initial welcome screen
 class MainActivity : AppCompatActivity() {
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        //Creates the initial Bundle
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //Configuring the get started text button
         val getStartedText : TextView = findViewById(R.id.textView3)
+
+        //On the click of the button it goes to the next screen
         getStartedText.setOnClickListener {
             val intent = Intent(this, PhoneNumberActivity::class.java)
             // start your next activity
             startActivity(intent)
         }
 
-
     }
 
-    override fun onResume() {
-        super.onResume()
-
-
-    }
 }
